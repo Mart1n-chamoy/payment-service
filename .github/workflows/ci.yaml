@@ -23,7 +23,7 @@ jobs:
 
 
     - name: Docker Build
-      run: docker build -t martin555/payment-service:latest .
+      run: docker build -t martin555/paymentservice:latest .
 
     - name: Docker Login
       uses: docker/login-action@v3
@@ -32,4 +32,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push image
-      run: docker push martin555/payment-service:latest
+      run: docker push martin555/paymentservice:latest
